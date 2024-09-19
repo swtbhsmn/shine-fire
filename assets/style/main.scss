@@ -1,13 +1,5 @@
-$smallScreen: 300px;
-$mediumScreen: 900px;
-$largeScreen: 1920px;
-
-@font-face {
-    font-family: "Montserrat";
-    src:
-        local("Trickster"),
-        url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype") tech(color-COLRv1);
-}
+@import "./breakpoints";
+@import "./mixins";
 
 * {
     margin: 0;
@@ -16,6 +8,14 @@ $largeScreen: 1920px;
     --primary-bg-light: #ededed;
     --navy-blue: #2d86d5;
     --box-shadow-1: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    --parent-url: '';
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        local("Montserrat"),
+        url("/shine-fire/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype") tech(color-COLRv1);
 }
 
 html, body {
@@ -28,12 +28,6 @@ html, body {
 #app {
     width: 100dvw;
     height: 100dvh;
-
-    @media screen and (min-width: $largeScreen) {
-        width: 1920px;
-        margin: auto;
-    }
-
 }
 
 header {
@@ -49,6 +43,7 @@ header {
 
     nav {
         width: 90%;
+        max-width: $screen-xxl-min;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -76,6 +71,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: $screen-xxl-min;
+    margin: auto;
     
     #hero {
         position: fixed;
@@ -86,7 +83,7 @@ main {
         align-items: center;
         justify-content: center;
         padding: 30px;
-        background-image: url("/assets/images/bg-hero.jpg");
+        background-image: url("/shine-fire/assets/images/bg-hero.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -111,9 +108,14 @@ main {
         border-radius: 1rem;
         display: flex;
         z-index: 998;
+        flex-direction: column;
         justify-content:space-evenly;
         align-items: center;
         box-shadow: var(--box-shadow-1);
+
+        @include md {
+            flex-direction: row;
+        }
 
         .matrix--card {
 
@@ -144,6 +146,11 @@ main {
                 width: 1px;
                 background-color: #cccccc;
                 height: 100%;
+
+                @include md-max {
+                    height: 1px;
+                    width: 100%;
+                }
             }
         }
 
@@ -156,7 +163,7 @@ main {
         align-items: flex-start;
         justify-content: center;
         background-color: #fff;
-        margin-top: -142px;
+        margin-top: -135px;
         z-index: 997;
     
         #customers {
