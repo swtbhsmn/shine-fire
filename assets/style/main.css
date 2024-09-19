@@ -72,7 +72,7 @@ main #hero {
   align-items: center;
   justify-content: center;
   padding: 30px;
-  background-image: url("/assets/images/bg-hero.jpg");
+  background-image: url("https://swetabh.com/shine-fire/assets/images/bg-hero.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
