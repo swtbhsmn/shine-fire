@@ -48,8 +48,21 @@ header nav a {
   text-decoration: none;
   color: #000;
 }
-header nav--brand-name {
-  font-size: 1.4rem;
+header nav #nav--brand-name {
+  font-size: 1rem;
+}
+@media (max-width: 422px) {
+  header nav #nav--brand-name {
+    font-size: 0.9rem;
+  }
+}
+header nav #nav--contact-number {
+  font-size: 1rem;
+}
+@media (max-width: 422px) {
+  header nav #nav--contact-number {
+    font-size: 0.9rem;
+  }
 }
 
 main {

@@ -55,9 +55,22 @@ header {
             color: #000;
         }
 
-        &--brand {
-            &-name {
-                font-size: 1.4rem;
+        #nav {
+            &--brand {
+                &-name {
+                    font-size: 1rem;
+    
+                    @include xs-max {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            &--contact-number {
+                font-size: 1rem;
+    
+                @include xs-max {
+                    font-size: 0.9rem;
+                }
             }
         }
 

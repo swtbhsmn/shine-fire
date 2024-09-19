@@ -36,6 +36,12 @@
 
 // MAX
 // Small devices
+@mixin xs-max {
+    @media (max-width: #{$screen-xs-min}) {
+        @content;
+    }
+}
+
 @mixin sm-max {
     @media (max-width: #{$screen-sm-min}) {
         @content;
