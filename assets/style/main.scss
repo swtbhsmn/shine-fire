@@ -62,6 +62,10 @@ header {
                 &-name {
                     font-size: 1rem;
 
+                    .fa-fire-extinguisher {
+                        color: #a61919;
+                    }
+
                     @include xs-max {
                         font-size: 0.9rem;
                     }
@@ -202,7 +206,7 @@ footer {
 
         &-top,
         &-bottom {
-            width: 90%;
+            width: 100%;
             max-width: $screen-xxl-min;
             margin: auto;
             color: #fff;
@@ -218,7 +222,7 @@ footer {
 
         &-bottom {
             height: 50px;
-            border-top: 0.5px solid #cccccc;
+            border-top: 0.5px solid #8b8b8b;
         }
     }
 
@@ -229,6 +233,7 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-width: 30%;
 
             > *{
                 margin-top: 15px;
