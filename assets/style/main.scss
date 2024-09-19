@@ -6,8 +6,9 @@
     box-sizing: border-box;
     --primary-text-light: #ededed;
     --primary-bg-light: #ededed;
+    --color-light: #fff;
     --navy-blue: #2d86d5;
-    --box-shadow-1: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    --box-shadow-1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     --parent-url: '';
 }
 
@@ -18,7 +19,8 @@
         url("/shine-fire/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype") tech(color-COLRv1);
 }
 
-html, body {
+html,
+body {
     position: relative;
     margin: auto;
     padding: 0;
@@ -59,15 +61,16 @@ header {
             &--brand {
                 &-name {
                     font-size: 1rem;
-    
+
                     @include xs-max {
                         font-size: 0.9rem;
                     }
                 }
             }
+
             &--contact-number {
                 font-size: 1rem;
-    
+
                 @include xs-max {
                     font-size: 0.9rem;
                 }
@@ -79,14 +82,14 @@ header {
 }
 
 main {
-    height: 100dvh;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: $screen-xxl-min;
     margin: auto;
-    
+    z-index: 998;
+
     #hero {
         position: fixed;
         height: 650px;
@@ -112,17 +115,21 @@ main {
             font-size: 1.5rem;
         }
 
+        &-clearfix {
+            height: 550px;
+        }
+
     }
 
     #matrix {
         width: 90%;
-        margin-top: 560px;
+        position: relative;
         background-color: var(--primary-bg-light);
         border-radius: 1rem;
         display: flex;
         z-index: 998;
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         align-items: center;
         box-shadow: var(--box-shadow-1);
 
@@ -135,8 +142,8 @@ main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px 20px;
-            width: 300px;
+            padding: 30px 35px;
+            align-self: flex-start;
 
             &-value {
                 font-size: 2rem;
@@ -158,7 +165,7 @@ main {
             &-divider {
                 width: 1px;
                 background-color: #cccccc;
-                height: 100%;
+                align-self: stretch;
 
                 @include md-max {
                     height: 1px;
@@ -171,17 +178,70 @@ main {
 
     #content {
         width: 100%;
-        z-index: 998;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        background-color: #fff;
-        margin-top: -135px;
+        background-color: var(--color-light);
+        margin-top: -90px;
         z-index: 997;
-    
+        border-radius: 4px 4px 0 0;
+
+        &--margin-top {
+            height: 100px;
+        }
+
         #customers {
             display: block;
-            min-height: 6000px;
+        }
+    }
+}
+
+footer {
+    position: relative;
+    background-color: #000;
+    z-index: 999;
+
+    #footer {
+
+        &-top,
+        &-bottom {
+            width: 90%;
+            max-width: $screen-xxl-min;
+            margin: auto;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include md-max {
+                flex-direction: column;
+            }
+
+        }
+
+        &-bottom {
+            height: 50px;
+            border-top: 0.5px solid #cccccc;
+        }
+    }
+
+    .footer {
+        &-section {
+            min-height: 100px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            > *{
+                margin-top: 15px;
+                padding: 5px;
+                
+                p, a {
+                    text-decoration: none;
+                    color: var(--primary-text-light);
+                }
+            }
+        }
+        &-title {
+            color: #a61919;
         }
     }
 }
