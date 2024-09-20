@@ -4,6 +4,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     --primary-text-light: #ededed;
     --primary-bg-light: #ededed;
     --color-light: #fff;
@@ -199,7 +200,7 @@ main {
 
 footer {
     position: relative;
-    background-color: #000;
+    background-color: #212121;
     z-index: 999;
 
     #footer {
@@ -246,7 +247,19 @@ footer {
             }
         }
         &-title {
-            color: #a61919;
+            color: var(--navy-blue);
         }
     }
+}
+
+.strokeme {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.color-red {
+    color: #a61919;
+}
+
+.color-light {
+    color: var(--primary-text-light);
 }

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   --primary-text-light: #ededed;
   --primary-bg-light: #ededed;
   --color-light: #fff;
@@ -170,7 +171,7 @@ main #content #customers {
 
 footer {
   position: relative;
-  background-color: #000;
+  background-color: #212121;
   z-index: 999;
 }
 footer #footer-top, footer #footer-bottom {
@@ -208,5 +209,17 @@ footer .footer-section > * p, footer .footer-section > * a {
   color: var(--primary-text-light);
 }
 footer .footer-title {
+  color: var(--navy-blue);
+}
+
+.strokeme {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.color-red {
   color: #a61919;
+}
+
+.color-light {
+  color: var(--primary-text-light);
 }/*# sourceMappingURL=main.css.map */
