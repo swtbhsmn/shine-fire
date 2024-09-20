@@ -30,6 +30,8 @@ body {
 
 #app {
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -90,9 +92,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 0 auto;
     max-width: $screen-xxl-min;
     margin: auto;
-    min-height: calc(100dvh - 4rem);
     z-index: 998;
 
     #hero {
@@ -202,6 +204,7 @@ footer {
     position: relative;
     width: 100%;
     background-color: #212121;
+    flex-shrink: 0;
     z-index: 999;
 
     #footer {
