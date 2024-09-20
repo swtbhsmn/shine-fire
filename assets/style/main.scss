@@ -92,6 +92,7 @@ main {
     align-items: center;
     max-width: $screen-xxl-min;
     margin: auto;
+    min-height: calc(100dvh - 4rem);
     z-index: 998;
 
     #hero {
