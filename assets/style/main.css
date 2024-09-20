@@ -23,13 +23,12 @@ body {
 }
 
 #app {
-  width: 100dvw;
   height: 100dvh;
 }
 
 header {
   height: 4rem;
-  width: inherit;
+  width: 100%;
   display: flex;
   justify-content: center;
   position: fixed;
