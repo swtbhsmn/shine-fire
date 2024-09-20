@@ -169,7 +169,8 @@ main #content #customers {
 }
 
 footer {
-  position: relative;
+  position: absolute;
+  width: 100%;
   background-color: #212121;
   z-index: 999;
 }
